@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+
+/* Header */
+header {
+    background-color: #292929;
+    height: 140px;
+    padding-left: 77px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Hero */
+.hero {
+    height: 550px;
+    background: url('../public/hero-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 109px 873px 159px 77px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.05em;
+    line-height: 94px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Form */
+.search {
+    padding: 61px 57px 0px 77px;
 }
 
-.App-link {
-  color: #61dafb;
+.search label {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search input {
+    height: 54px;
+    border: 1px solid #000000;
+    border-radius: 0;
+}
+
+/* Movie Rows */
+.movie-rows{
+    padding-top: 55px;
+    padding-left: 67px;
+}
+
+.movie-rows h2, .card p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.card-rows {
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.card-rows::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    margin-left: 10px;
+}
+
+.card-rows::-webkit-scrollbar-thumb {
+    background: lightgrey;
+    border-radius: 10px;
+}
+
+.card-rows::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
+.card {
+    width: 300px;
+    height: 450px;
+    border-color: transparent;
+    border-radius: 12px;
+    flex: 0 0 auto;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-overlay {
+    opacity: 0;
+    color: transparent;
+}
+
+.card-img-overlay:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+}
+
+.spinner {
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+/* Media Queries */
+@media (max-width: 991px) {
+    header {
+        padding-left: 0;
+    }
+
+    .hero {
+        padding: 0;
+    }
+    
+    .hero h1 {
+        width: 490px;
+    }
+
+    .search {
+        padding-right: 77px;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    header {
+        height: 67px;
+    }
+
+    .logo {
+        width: 108px;
+        height: 34px;
+    }
+
+    .hero {
+        height: 257px;
+    }
+
+    .hero h1 {
+        width: 273px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .search {
+        padding: 56px 27px 0 28px;
+    }
+
+    .search label {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .search input {
+        height: 34px;
+    }
+    
+    .movie-rows{
+        padding-top: 35px;
+        padding-left: 18px;
+    }
+    
+    .movie-rows h2, .card p{
+        font-size: 18px;
+        line-height: 23px;
+    }
+    
+    .card {
+        width: 200px;
+    }
+    
 }
