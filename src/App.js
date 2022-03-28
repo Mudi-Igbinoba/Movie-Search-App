@@ -16,7 +16,7 @@ function App() {
     const getMovies = async () => {
       setIsLoading(true)
       const apiKey = '3c93a0c2'
-      let response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`)
+      let response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`)
       let data = await response.json()
 
       if (data.Response == 'True') {
